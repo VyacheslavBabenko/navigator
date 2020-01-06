@@ -1,4 +1,4 @@
-import { Component, AfterContentChecked } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./item.component.scss']
 })
 
-export class ItemComponent implements AfterContentChecked {
+export class ItemComponent implements DoCheck {
 
   private tab: any;
    
@@ -1330,7 +1330,7 @@ export class ItemComponent implements AfterContentChecked {
     );
   }
 
-  ngAfterContentChecked(): void {
+  ngDoCheck(): void {
     if (this.tab == 0) {
       this.tab = 'income';
     } else if (this.tab == 1) {
