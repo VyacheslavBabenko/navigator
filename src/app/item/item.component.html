@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Amount</th>
+    </tr>
+
+    <ng-container *ngFor="let item of json.data">
+        <tr *ngIf="item.type == tab" >
+            <td> {{ item.name.first }} {{ item.name.last }} </td>
+            <td> {{ item.company }} </td>
+        </tr>
+    </ng-container>
+
+</table>
+
+
+        
+
+  
